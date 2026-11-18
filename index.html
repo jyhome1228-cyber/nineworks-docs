@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111111"><title>NINEWORKS DOCS | 문서 관리</title>
+<link rel="stylesheet" href="./styles.css"></head>
+<body>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="brand-name">NINEWORKS<span class="brand-dot">.</span></div><div class="brand-sub">DOCUMENT WORKSPACE</div></div>
+  <div class="nav-caption">WORKSPACE</div>
+  <nav id="nav" aria-label="주요 메뉴">
+    <button data-view="dashboard" class="nav-link active"><span class="nav-icon">▦</span>대시보드</button>
+    <button data-view="documents" class="nav-link"><span class="nav-icon">▤</span>문서 관리</button>
+    <button data-view="clients" class="nav-link"><span class="nav-icon">♧</span>거래처 관리</button>
+    <button data-view="settings" class="nav-link"><span class="nav-icon">⚙</span>기본정보 설정</button>
+  </nav>
+  <div class="sidebar-bottom"><div class="side-rule"></div><span>PRIVATE WORKSPACE</span><small>데이터는 현재 브라우저에만 저장됩니다.</small></div>
+</aside>
+<div class="backdrop" id="backdrop"></div>
+<div class="workspace">
+<header class="topbar"><div class="top-left"><button class="mobile-toggle" id="menuToggle" aria-label="메뉴 열기">☰</button><span class="top-location">NINEWORKS <span class="dim">/</span> <strong id="breadcrumb">대시보드</strong></span></div><div class="top-right"><span class="status-circle"></span> LOCAL MODE <button class="top-action" id="newTop">+ 새 문서</button></div></header>
+<main class="main" id="main"></main>
+<footer class="footer"><span>NINEWORKS DOCS</span><span>Document management · Initial build</span></footer>
+</div></div>
+<dialog id="modal" class="modal"><form method="dialog" class="modal-inner"><div class="modal-header"><h2 id="modalTitle">새 문서</h2><button value="cancel" class="icon-button" aria-label="닫기">×</button></div><div class="modal-content" id="modalContent"></div><div class="modal-actions"><button value="cancel" class="btn ghost">취소</button><button value="ok" class="btn black" id="modalConfirm">저장</button></div></form></dialog>
+<div id="toast" class="toast" role="status"></div>
+<script src="./app.js" defer></script>
+</body></html>
